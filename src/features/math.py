@@ -1,18 +1,31 @@
 import numpy as np
-
+from typing import Dict
 
 def get_derivative(x: np.ndarray, y: np.ndarray) -> np.ndarray:
     """
     Calculate the derivative of two arrays with normalization.
 
     Parameters:
-    x (np.ndarray): The first array.
-    y (np.ndarray): The second array.
+    ----------
+    x : np.ndarray
+        The first array (independent variable values).
+    y : np.ndarray
+        The second array (dependent variable values).
 
     Returns:
-    np.ndarray: The array of the derivative.
+    -------
+    np.ndarray
+        Array containing the calculated derivative values, with NaN prepended
+        to match the length of the input arrays.
+
+    Example:
+    -------
+    >>> x = np.array([1, 2, 3, 4])
+    >>> y = np.array([2, 4, 6, 8])
+    >>> get_derivative(x, y)
+    array([nan, 2. , 2. , 2. ])
     """
-    # Make sure it's an array
+    # Ensure inputs are numpy arrays
     x = np.array(x)
     y = np.array(y)
 
@@ -20,11 +33,41 @@ def get_derivative(x: np.ndarray, y: np.ndarray) -> np.ndarray:
     dx_perc = np.diff(x) / x[:-1]
     dy_perc = np.diff(y) / y[:-1]
 
-    # Calculate the derivative
-    derivative = np.round((dy_perc / dx_perc), 4)
+    # Compute the derivative and round to 4 decimal places
+    derivative = np.round(dy_perc / dx_perc, 4)
 
-    # Since np.diff reduces the length by 1, prepend a NaN to align with the original length
+    # Align with original array length by prepending NaN
     derivative = np.insert(derivative, 0, np.nan)
 
-    # Convert the result back to a pandas Series
     return derivative
+
+def fib(n: int, memo: Dict[int, int] = {}) -> int:
+    """
+    Compute the nth Fibonacci number using memoization.
+
+    Parameters:
+    ----------
+    n : int
+        The position of the Fibonacci sequence to calculate.
+    memo : Dict[int, int], optional
+        A dictionary for storing previously computed Fibonacci numbers.
+
+    Returns:
+    -------
+    int
+        The nth Fibonacci number.
+
+    Example:
+    -------
+    >>> fib(5)
+    5
+    >>> fib(10)
+    55
+    """
+    if n in memo:  # Check if already computed
+        return memo[n]
+    if n <= 1:
+        return n
+    # Store the result in the memo dictionary
+    memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
+    return memo[n]
