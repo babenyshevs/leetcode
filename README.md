@@ -1,5 +1,5 @@
 # Project:
-
+![alt text](reports/figures/image.png)
 # Data:
 
 exploration of customer utterances (clustering)
