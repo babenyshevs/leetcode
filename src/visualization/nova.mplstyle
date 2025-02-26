@@ -1,0 +1,83 @@
+font.family:  Organica  # choose which font family to use for all texts (like choosing a general style of writing)
+font.variant: normal    # set the style of the font's letters (e.g., normal, small-caps)
+font.weight:  normal    # define how thick or bold the text looks
+
+font.size: 10           # set how big the text appears in your plots
+
+# figure
+figure.facecolor: fafbfd  # set the overall background color of the figure space
+
+
+# AXES
+
+
+# Title settings
+axes.titlecolor: ef3c3f                # pick a color for the main title text
+axes.titlesize: 16                      # control how large the main title text is
+axes.titlepad: 15                       # add some space between the title and the plot area
+axes.titleweight: bold                  # make the main title text thicker or bolder
+# Subtitle settings
+figure.titlesize: 12                    # size of subtitles or secondary titles on the figure
+
+
+
+
+axes.labelsize : 10                     # pick how big labels (like x-axis or y-axis) should be
+axes.edgecolor : black                  # set the color of the boundary or edge around the plot
+axes.labelcolor : black                 # choose the color for axis labels
+axes.linewidth : 1                      # control how thick the axis lines appear
+
+axes.spines.top : False                 # hide or remove the top boundary line of the plot
+axes.spines.right : False               # hide or remove the right boundary line of the plot
+axes.spines.bottom : True               # show the bottom boundary line of the plot
+axes.spines.left : False                # hide or remove the left boundary line of the plot
+axes.facecolor: fafbfd                  # choose the background color inside the plot
+# GRID
+axes.grid : False                         # show grid lines to help read values
+grid.alpha : 0.7                        # make grid lines a bit transparent
+grid.linestyle : --                     # draw dashed grid lines
+grid.linewidth : 1                      # control how thick these grid lines look
+
+# LINES
+axes.prop_cycle : cycler('color',["121767","ef3c3f","4cc5dd","facd12","6033f3","7b038e","70ad5d","f15546","0df38f","fb0998","2c5c39","be5cca","b3e61c","6760b6","34f50e"])  # define a list of colors for lines
+lines.linewidth : 1.5                   # set the default thickness for lines
+#lines.markeredgewidth : 0.0            # remove outlines around markers
+
+# SCATTER PLOT
+scatter.marker : .                      # use small dots for scatter plots
+
+# TICKS
+xtick.labelsize : 10                    # set the size for the numbers along the x-axis
+xtick.color : black                     # pick the color of x-axis labels
+xtick.direction : inout                 # draw x-axis ticks on both inside and outside of the plot
+xtick.major.size : 8                    # make major x-axis ticks this long
+xtick.minor.size : 5                    # make minor x-axis ticks this long
+xtick.minor.visible : False             # don't show the smaller x-axis ticks
+
+# Ytick
+
+ytick.labelsize : 10                    # set the size for the numbers along the y-axis
+ytick.color : black                     # pick the color of y-axis labels
+ytick.direction : in                    # draw y-axis ticks towards the inside
+ytick.major.pad: 2                      # add space between y-axis ticks and labels
+ytick.major.size : 6                   # make major y-axis ticks this long
+ytick.minor.visible : False             # don't show the smaller y-axis ticks
+ytick.minor.size : 0                    # if shown, minor ticks would be this long
+
+# FIGURE OUTPUT
+figure.figsize  : 10, 8                 # define default width and height of the figure in inches
+figure.dpi : 150                        # control how sharp your figure looks when displayed
+
+#Legend
+
+legend.frameon :  True                  # put a box around the legend
+legend.fontsize : 10                    # control the size of text within the legend
+legend.borderpad : 0                    # reduce empty space inside the legend box
+legend.handleheight : 0                 # control spacing for legend symbols
+legend.edgecolor: fafbfd                # the color of the legend's outer border
+legend.title_fontsize : 12              # set the size of the legend title
+
+
+#Images
+
+image.cmap: coolwarm                    # default color scheme for images or heatmaps
