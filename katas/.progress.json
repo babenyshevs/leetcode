@@ -1,0 +1,9 @@
+{
+  "solved": [1, 9, 13],
+  "next_problem": 14,
+  "history": [
+    {"problem": 1, "language": "python"},
+    {"problem": 9, "language": "python", "note": "skipped #2-#8 (Medium/Hard)"},
+    {"problem": 13, "language": "python", "note": "skipped #10-#12 (Medium/Hard)"}
+  ]
+}
