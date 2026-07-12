@@ -1,12 +1,13 @@
 {
-  "solved": [1, 9, 13, 14, 20, 21],
-  "next_problem": 22,
+  "solved": [1, 9, 13, 14, 20, 21, 26],
+  "next_problem": 27,
   "history": [
     {"problem": 1, "language": "python"},
     {"problem": 9, "language": "python", "note": "skipped #2-#8 (Medium/Hard)"},
     {"problem": 13, "language": "python", "note": "skipped #10-#12 (Medium/Hard)"},
     {"problem": 14, "language": "python"},
     {"problem": 20, "language": "python", "note": "skipped #15-#19 (Medium)"},
-    {"problem": 21, "language": "python"}
+    {"problem": 21, "language": "python"},
+    {"problem": 26, "language": "python", "note": "skipped #22-#25 (Medium/Hard)"}
   ]
 }
